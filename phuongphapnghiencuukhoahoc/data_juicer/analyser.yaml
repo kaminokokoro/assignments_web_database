@@ -1,0 +1,5 @@
+
+dataset_path: 'D:\hung\all_project\phuongphapnghiencuukhoahoc\data_juicer\wiki\0000.parquet'
+
+# only for data analysis
+save_stats_in_one_file: false

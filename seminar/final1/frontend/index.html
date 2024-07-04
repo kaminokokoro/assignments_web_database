@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* CSS cho phần output */
+    #output {
+      margin-top: 30px;
+      text-align: left;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      white-space: pre-wrap; /* Giữ nguyên định dạng và xuống dòng */
+      font-family: 'Courier New', monospace; /* Sử dụng font chữ Courier New cho mã code */
+      color: #333; /* Màu văn bản */
+      background-color: #f7f7f7; /* Màu nền */
+    }
+
+    /* Đánh số dòng cho code trong phần output */
+    #output code {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #333; /* Màu văn bản */
+      background-color: #f7f7f7; /* Màu nền */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow-x: auto; /* Thêm thanh trượt ngang nếu cần */
+    }
+
+    #output code > span::before {
+      content: counter(line-number);
+      counter-increment: line-number;
+      display: inline-block;
+      width: 30px; /* Điều chỉnh kích thước của số dòng */
+      text-align: right;
+      margin-right: 10px; /* Khoảng cách giữa số dòng và mã */
+      color: #999; /* Màu của số dòng */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>GPT Demo</h1>
+    <textarea id="inputText" placeholder="Nhập văn bản ở đây..."></textarea>
+
+    <button onclick="generateText()">Tạo văn bản</button>
+    <h2 id="result-heading">Kết quả:</h2>
+    <div id="output">
+
+      <code></code>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

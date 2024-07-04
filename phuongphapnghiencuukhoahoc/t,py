@@ -1,0 +1,19 @@
+t = int(input())  # Số lượng trường hợp kiểm tra
+
+# Duyệt qua từng trường hợp kiểm tra
+for _ in range(t):
+    n = int(input())  # Số lượng món khai vị và món chính
+    appetizers = list(map(int, input().split()))  # Độ cay của món khai vị
+    mains = list(map(int, input().split()))  # Độ cay của món chính
+
+    # Sắp xếp các mảng theo độ cay
+    appetizers.sort()
+    mains.sort()
+
+    # xuay mảng main
+    min_attraction = float('-inf')
+    for i in range(n):
+        attraction = abs(appetizers[i] - mains[i])
+        min_attraction = max(min_attraction, attraction)
+
+    print(min_attraction)

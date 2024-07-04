@@ -1,0 +1,11 @@
+
+
+dataset_path: D:\hung\all_project\phuongphapnghiencuukhoahoc\data_juicer\wiki\0000.jsonl
+
+
+
+process:
+  - type: tokenize
+    target_field: tokens
+    source_field: text
+    language: vi

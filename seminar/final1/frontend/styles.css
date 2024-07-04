@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px; /* Tăng chiều rộng của container */
+  margin: 0 auto;
+  text-align: center;
+}
+
+textarea {
+  width: calc(100% - 20px); /* Điều chỉnh chiều rộng của textarea */
+  height: 200px; /* Tăng chiều cao của textarea */
+  margin-bottom: 20px; /* Tăng khoảng cách dưới của textarea */
+}
+
+button {
+  padding: 12px 24px; /* Tăng kích thước của button */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Thêm viền cong cho button */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#output {
+  margin-top: 30px; /* Tăng khoảng cách trên của phần output */
+  text-align: left; /* Căn lề trái cho nội dung trong phần output */
+  padding: 20px; /* Thêm padding cho phần output */
+  border: 1px solid #ccc; /* Thêm viền cho phần output */
+  border-radius: 5px; /* Thêm viền cong cho phần output */
+}
+
+/* Đánh số dòng cho code trong phần output */
+#output code {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333; /* Màu văn bản */
+  background-color: #f7f7f7; /* Màu nền */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  counter-reset: line-number;
+}
+
+#output code > span::before {
+  content: counter(line-number);
+  counter-increment: line-number;
+  display: inline-block;
+  width: 30px; /* Điều chỉnh kích thước của số dòng */
+  text-align: right;
+  margin-right: 10px; /* Khoảng cách giữa số dòng và mã */
+  color: #999; /* Màu của số dòng */
+}
+
